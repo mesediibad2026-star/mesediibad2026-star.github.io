@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Qulam Mirzezade — Portfolio</title>
+<meta name="description" content="Ad creatives, product photography, video and exhibition design by Qulam Mirzezade.">
+<meta property="og:title" content="Qulam Mirzezade — Portfolio">
+<meta property="og:description" content="Ad creatives, product photography, video and exhibition design.">
+<meta property="og:image" content="img/ad-eagle-6.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@75..125,500..900&family=Inter:wght@400;500;600&display=swap">
+<style>
+:root{
+  --bg:#0d0e0f; --bg2:#151719; --line:#26292c; --ink:#f2efe9; --muted:#9a9a96; --accent:#e86a2c;
+  --display:"Archivo","Arial Narrow",Arial,sans-serif; --body:"Inter",system-ui,"Segoe UI",sans-serif;
+  --pad:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:1320px;margin:0 auto;padding:0 var(--pad)}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(13,14,15,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.logo{font-family:var(--display);font-weight:800;font-stretch:110%;letter-spacing:.02em;text-decoration:none;font-size:17px;white-space:nowrap}
+.logo span{color:var(--accent)}
+nav{display:flex;gap:22px;font-size:14px;color:var(--muted)}
+nav a{text-decoration:none}
+nav a:hover{color:var(--ink)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#111;font-weight:600;font-size:14px;text-decoration:none;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.btn:hover{filter:brightness(1.08)}
+.btn svg{width:16px;height:16px}
+@media (max-width:820px){nav{display:none}}
+
+/* hero */
+.hero{padding-top:clamp(56px,10vw,120px);padding-bottom:clamp(40px,6vw,72px)}
+.eyebrow{font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 18px}
+h1{font-family:var(--display);font-weight:900;font-stretch:118%;font-size:clamp(46px,10vw,132px);line-height:.9;letter-spacing:-.01em;margin:0;text-transform:uppercase}
+h1 em{font-style:normal;color:var(--accent)}
+.lede{max-width:56ch;font-size:clamp(17px,1.6vw,20px);color:#d6d3cd;margin:28px 0 0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.chips a{border:1px solid var(--line);border-radius:999px;padding:7px 14px;font-size:14px;text-decoration:none;color:#d6d3cd}
+.chips a:hover{border-color:var(--accent);color:var(--ink)}
+.strip{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:clamp(40px,6vw,72px)}
+.strip img{width:100%;aspect-ratio:9/16;object-fit:cover;border-radius:6px}
+@media (max-width:700px){.strip{grid-template-columns:repeat(3,1fr)}.strip img:nth-child(n+4){display:none}}
+
+/* sections */
+section.block{padding:clamp(56px,8vw,104px) 0;border-top:1px solid var(--line)}
+.head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:24px 48px;align-items:end;margin-bottom:clamp(28px,4vw,48px)}
+.num{font-family:var(--display);font-weight:700;color:var(--accent);font-size:14px;letter-spacing:.1em}
+h2{font-family:var(--display);font-weight:850;font-stretch:112%;font-size:clamp(34px,5.5vw,68px);line-height:.95;margin:6px 0 0;text-transform:uppercase}
+.head p{margin:0;color:#c9c6c0;max-width:60ch}
+.meta{display:flex;flex-wrap:wrap;gap:6px 18px;margin-top:12px;font-size:13px;color:var(--muted)}
+@media (max-width:820px){.head{grid-template-columns:1fr}}
+
+.grid{display:grid;gap:12px}
+.g-ads{grid-template-columns:repeat(5,1fr)}
+.g-ads figure img{aspect-ratio:9/16}
+@media (max-width:1000px){.g-ads{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:560px){.g-ads{grid-template-columns:repeat(2,1fr)}}
+.g-photo{grid-template-columns:repeat(4,1fr);grid-auto-flow:dense}
+.g-photo figure img{aspect-ratio:3/4}
+.g-photo .sq img{aspect-ratio:1/1}
+.g-photo .fit{background:#fff}.g-photo .fit img{object-fit:contain;padding:8px}
+.g-photo .wide{grid-column:span 2}
+.g-photo .wide img{aspect-ratio:3/2}
+@media (max-width:820px){.g-photo{grid-template-columns:repeat(2,1fr)}}
+.g-cat{grid-template-columns:repeat(6,1fr);margin-top:12px}
+.g-cat figure{background:#fff}
+.g-cat img{aspect-ratio:1/1;object-fit:contain}
+@media (max-width:820px){.g-cat{grid-template-columns:repeat(3,1fr)}}
+.sub{font-family:var(--display);font-weight:700;font-stretch:110%;text-transform:uppercase;letter-spacing:.06em;font-size:15px;color:var(--muted);margin:40px 0 14px}
+
+figure{margin:0;position:relative;overflow:hidden;border-radius:6px;background:var(--bg2);cursor:zoom-in}
+figure img{width:100%;height:100%;object-fit:cover;transition:transform .5s ease}
+figure:hover img{transform:scale(1.03)}
+figcaption{position:absolute;left:0;right:0;bottom:0;padding:24px 12px 10px;font-size:13px;background:linear-gradient(transparent,rgba(0,0,0,.72));opacity:0;transition:opacity .25s}
+figure:hover figcaption,figure:focus-visible figcaption{opacity:1}
+figure:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+
+/* video */
+.g-vid{grid-template-columns:repeat(4,1fr);align-items:start}
+.g-vid .wide{grid-column:1/-1}
+.vcard{background:var(--bg2);border-radius:6px;overflow:hidden}
+.vcard video{width:100%;background:#000}
+.vcard .cap{padding:12px 14px 14px}
+.vcard b{display:block;font-weight:600;font-size:15px}
+.vcard span{font-size:13px;color:var(--muted)}
+@media (max-width:900px){.g-vid{grid-template-columns:repeat(2,1fr)}}
+
+/* stand */
+.g-stand{grid-template-columns:repeat(6,1fr)}
+.g-stand .c2{grid-column:span 2}.g-stand .c3{grid-column:span 3}.g-stand .c4{grid-column:span 4}.g-stand .c6{grid-column:span 6}
+.g-stand img{object-fit:cover;background:#1b1d1f}
+.g-stand .c3 img{aspect-ratio:1/1;object-fit:contain}
+@media (max-width:820px){.g-stand{grid-template-columns:repeat(2,1fr)}.g-stand>*{grid-column:span 2!important}}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:12px}
+.facts div{border:1px solid var(--line);border-radius:6px;padding:16px}
+.facts b{display:block;font-family:var(--display);font-weight:800;font-size:22px}
+.facts span{color:var(--muted);font-size:14px}
+@media (max-width:700px){.facts{grid-template-columns:1fr}}
+
+/* contact */
+.contact{padding:clamp(72px,10vw,128px) 0;border-top:1px solid var(--line);text-align:left}
+.contact h2{font-size:clamp(40px,8vw,104px)}
+.contact .btn{font-size:17px;padding:14px 22px;margin-top:28px}
+.contact .phone{display:block;margin-top:14px;color:var(--muted)}
+footer{border-top:1px solid var(--line);padding:22px 0;color:var(--muted);font-size:13px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:50;background:rgba(5,5,6,.95);display:none;align-items:center;justify-content:center;padding:56px 16px}
+.lb.open{display:flex}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:4px}
+.lb button{position:absolute;background:rgba(255,255,255,.08);color:var(--ink);border:0;width:44px;height:44px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb button:hover{background:var(--accent);color:#111}
+.lb .x{top:12px;right:12px}.lb .p{left:12px;top:50%;transform:translateY(-50%)}.lb .n{right:12px;top:50%;transform:translateY(-50%)}
+.lb .t{position:absolute;bottom:14px;left:0;right:0;text-align:center;font-size:14px;color:var(--muted)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap bar">
+    <a class="logo" href="#top">QULAM <span>MIRZEZADE</span></a>
+    <nav>
+      <a href="#ads">Ad creatives</a>
+      <a href="#photo">Photography</a>
+      <a href="#video">Video</a>
+      <a href="#stand">Exhibition stand</a>
+    </nav>
+    <a class="btn" href="https://wa.me/46735917342" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</header>
+
+<main id="top">
+  <div class="wrap hero">
+    <p class="eyebrow">Portfolio · Design · Photography · Video</p>
+    <h1>Qulam<br><em>Mirzezade</em></h1>
+    <p class="lede">Ad creatives, product photography, video and exhibition design for the sports eyewear brand Focus ON Eyewear.</p>
+    <div class="chips">
+      <a href="#ads">Ad creatives</a><a href="#photo">Product photography</a><a href="#video">Video</a><a href="#stand">SILMO İstanbul stand</a>
+    </div>
+    <div class="strip">
+      <img src="img/ad-eagle-6.jpg" alt="Eagle hueFX ad creative">
+      <img src="img/ad-horizon-1.jpg" alt="Horizon ad creative">
+      <img src="img/ad-nexa-4.jpg" alt="Nexa Mirror ad creative">
+      <img src="img/ad-wind.jpg" alt="Wind hueFX ad creative">
+      <img src="img/ad-aerofix.jpg" alt="Aero Fix ad creative">
+    </div>
+  </div>
+
+  <!-- ADS -->
+  <section class="block" id="ads">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="num">01</div><h2>Ad creatives</h2></div>
+        <div>
+          <p>Vertical ad sets for Instagram and Meta campaigns, built per product: a short Turkish headline, the model name with the hueFX lens mark, and a mix of studio hero shots, action scenes and black-and-white portraits with colour only on the lens. Every layout keeps the headline, face and product inside the 4:5 safe area so it survives Meta's crop.</p>
+          <div class="meta"><span>Format 9:16 · 4:5 safe area</span><span>Eagle · Horizon · Nexa Mirror · Nexa Pro Photochromic · Traverse · Vortex · Wind · Aero Fix · Carbo Air</span></div>
+        </div>
+      </div>
+      <div class="grid g-ads gallery">
+        <figure tabindex="0"><img loading="lazy" src="img/ad-eagle-6.jpg" data-full="img/ad-eagle-6.jpg" alt="Eagle hueFX — Odak Sende"><figcaption>Eagle hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-eagle-1.jpg" data-full="img/ad-eagle-1.jpg" alt="Eagle hueFX — Zirveden Bakanlar İçin"><figcaption>Eagle hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-eagle-7.jpg" data-full="img/ad-eagle-7.jpg" alt="Eagle hueFX lens close-up"><figcaption>Eagle hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-horizon-1.jpg" data-full="img/ad-horizon-1.jpg" alt="Horizon — Hızın Rengi"><figcaption>Horizon hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-horizon-7.jpg" data-full="img/ad-horizon-7.jpg" alt="Horizon — Çizgisi Net"><figcaption>Horizon hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-nexa-4.jpg" data-full="img/ad-nexa-4.jpg" alt="Nexa Mirror — Net ve Sade"><figcaption>Nexa Mirror hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-nexa-9.jpg" data-full="img/ad-nexa-9.jpg" alt="Nexa Mirror — Taş Gibi Sağlam, Tüy Gibi Hafif"><figcaption>Nexa Mirror hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-nexa-5.jpg" data-full="img/ad-nexa-5.jpg" alt="Nexa Mirror — Netlik, Hız, Stil"><figcaption>Nexa Mirror hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-photo-7.jpg" data-full="img/ad-photo-7.jpg" alt="Nexa Mirror — Karanlıkta Bile Net"><figcaption>Nexa Mirror hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-photo-5.jpg" data-full="img/ad-photo-5.jpg" alt="Nexa Pro Photochromic — Işığa Göre Ayarlanır"><figcaption>Nexa Pro Photochromic</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-aerofix.jpg" data-full="img/ad-aerofix.jpg" alt="Aero Fix hueFX — Rengini Konuştur"><figcaption>Aero Fix hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-horizon-4.jpg" data-full="img/ad-horizon-4.jpg" alt="Horizon — Hafif, Sağlam"><figcaption>Horizon hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-traverse-1.jpg" data-full="img/ad-traverse-1.jpg" alt="Traverse hueFX black and white portrait"><figcaption>Traverse hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-traverse-s1.jpg" data-full="img/ad-traverse-s1.jpg" alt="Traverse hueFX — Gözün Doğada"><figcaption>Traverse hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-traverse-s3.jpg" data-full="img/ad-traverse-s3.jpg" alt="Traverse hueFX hiking"><figcaption>Traverse hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-vortex.jpg" data-full="img/ad-vortex.jpg" alt="Vortex hueFX — Focus On Yourself"><figcaption>Vortex hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-wind.jpg" data-full="img/ad-wind.jpg" alt="Wind hueFX — Rüzgarı Arkana Al"><figcaption>Wind hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-carbo.jpg" data-full="img/ad-carbo.jpg" alt="Carbo Air hueFX — Hız İçin Tasarlandı"><figcaption>Carbo Air hueFX</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-k1.jpg" data-full="img/ad-k1.jpg" alt="Traverse hueFX — Yola Çık, campaign"><figcaption>Traverse hueFX · campaign</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ad-k2.jpg" data-full="img/ad-k2.jpg" alt="Shield hueFX — Rüzgarı Stille Kes, campaign"><figcaption>Shield hueFX · campaign</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- PHOTO -->
+  <section class="block" id="photo">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="num">02</div><h2>Product photography</h2></div>
+        <div>
+          <p>Studio shoots shot in RAW and edited for e-commerce, marketplaces and social: textured hero shots, detail close-ups of temples and coatings, the kids' collection, accessories, a model shoot and race-day photos, plus clean white-background catalogue images and product spec graphics.</p>
+          <div class="meta"><span>Hero &amp; detail</span><span>Catalogue / white background</span><span>Kids' collection</span><span>Event</span><span>Spec graphics</span></div>
+        </div>
+      </div>
+      <div class="grid g-photo gallery">
+        <figure tabindex="0"><img loading="lazy" src="img/ph-asgard.jpg" data-full="img/ph-asgard.jpg" alt="Asgard, textured studio shot"><figcaption>Asgard · studio</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-dsc1216.jpg" data-full="img/ph-dsc1216.jpg" alt="Temple detail close-up"><figcaption>Detail · temple</figcaption></figure>
+        <figure tabindex="0" class="sq"><img loading="lazy" src="img/ph-race.jpg" data-full="img/ph-race.jpg" alt="Cyclist at a race event"><figcaption>Race day</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-thor.jpg" data-full="img/ph-thor.jpg" alt="Thor, textured studio shot"><figcaption>Thor · studio</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-model.jpg" data-full="img/ph-model.jpg" alt="Model wearing Atlas hueFX"><figcaption>Atlas hueFX · model</figcaption></figure>
+        <figure tabindex="0" class="sq"><img loading="lazy" src="img/ph-sap.jpg" data-full="img/ph-sap.jpg" alt="Temple tip detail, macro"><figcaption>Detail · temple tips</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-kid-1.jpg" data-full="img/ph-kid-1.jpg" alt="Kids' sunglasses"><figcaption>Kids' collection</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-kid-2.jpg" data-full="img/ph-kid-2.jpg" alt="Kids' sunglasses"><figcaption>Kids' collection</figcaption></figure>
+        <figure tabindex="0" class="sq"><img loading="lazy" src="img/ph-rx.jpg" data-full="img/ph-rx.jpg" alt="Clear optical clip-in frame"><figcaption>Optical clip-in</figcaption></figure>
+        <figure tabindex="0" class="sq"><img loading="lazy" src="img/ph-spray.jpg" data-full="img/ph-spray.jpg" alt="Lens cleaning spray and box"><figcaption>Accessories</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-antifog.jpg" data-full="img/ph-antifog.jpg" alt="Yellow-lens frame on white"><figcaption>Catalogue</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-panther.jpg" data-full="img/ph-panther.jpg" alt="Panther on white"><figcaption>Panther · catalogue</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-glacier.jpg" data-full="img/ph-glacier.jpg" alt="Glacier on white"><figcaption>Glacier · catalogue</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/ph-ember.jpg" data-full="img/ph-ember.jpg" alt="Ember on white"><figcaption>Ember · catalogue</figcaption></figure>
+        <figure tabindex="0" class="sq"><img loading="lazy" src="img/ph-kenar.jpg" data-full="img/ph-kenar.jpg" alt="Mirror-lens frame with reflection"><figcaption>Catalogue · reflection</figcaption></figure>
+        <figure tabindex="0" class="sq fit"><img loading="lazy" src="img/ph-info.jpg" data-full="img/ph-info.jpg" alt="Aero Fix product spec graphic"><figcaption>Spec graphic · Aero Fix</figcaption></figure>
+      </div>
+      <div class="sub">Catalogue series · white background</div>
+      <div class="grid g-cat gallery">
+        <figure tabindex="0"><img loading="lazy" src="img/pc-blaze.jpg" data-full="img/pc-blaze.jpg" alt="Blaze"><figcaption>Blaze</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/pc-inferno.jpg" data-full="img/pc-inferno.jpg" alt="Inferno"><figcaption>Inferno</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/pc-phantom.jpg" data-full="img/pc-phantom.jpg" alt="Phantom"><figcaption>Phantom</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/pc-solaris.jpg" data-full="img/pc-solaris.jpg" alt="Solaris"><figcaption>Solaris</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/pc-volt.jpg" data-full="img/pc-volt.jpg" alt="Volt"><figcaption>Volt</figcaption></figure>
+        <figure tabindex="0"><img loading="lazy" src="img/pc-zenith.jpg" data-full="img/pc-zenith.jpg" alt="Zenith"><figcaption>Zenith</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- VIDEO -->
+  <section class="block" id="video">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="num">03</div><h2>Video</h2></div>
+        <div>
+          <p>A motion-graphics launch film for the hueFX lens technology, vertical ads for Reels and Stories, and short product demos that show the frame material, nose pads and air vents up close.</p>
+          <div class="meta"><span>16:9 · 9:16 · 3:4</span><span>Motion graphics · product demo · ad</span></div>
+        </div>
+      </div>
+      <div class="grid g-vid">
+        <div class="vcard wide"><video controls preload="none" playsinline poster="video/huefx-intro.jpg" src="video/huefx-intro.mp4"></video><div class="cap"><b>hueFX lens technology — launch film</b><span>Motion graphics · 16:9 · 58 s</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/eagle.jpg" src="video/eagle.mp4"></video><div class="cap"><b>Eagle hueFX</b><span>Ad · 9:16</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/wind.jpg" src="video/wind.mp4"></video><div class="cap"><b>Wind hueFX</b><span>Feature ad · 9:16</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/asgard.jpg" src="video/asgard.mp4"></video><div class="cap"><b>Asgard — flexible TR90 frame</b><span>Product demo · 3:4</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/thor.jpg" src="video/thor.mp4"></video><div class="cap"><b>Thor — TR90 frame</b><span>Product demo · 3:4</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/traverse-vents.jpg" src="video/traverse-vents.mp4"></video><div class="cap"><b>Traverse Gold — air vents</b><span>Detail clip · 3:4</span></div></div>
+        <div class="vcard"><video controls preload="none" playsinline poster="video/traverse-nose.jpg" src="video/traverse-nose.mp4"></video><div class="cap"><b>Traverse Gold — nose pads</b><span>Detail clip · 3:4</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STAND -->
+  <section class="block" id="stand">
+    <div class="wrap">
+      <div class="head">
+        <div><div class="num">04</div><h2>SILMO İstanbul 2026 stand</h2></div>
+        <div>
+          <p>Stand concept and graphics for Focus ON's corner module inside a shared stand at the SILMO İstanbul optical fair: floor plan and wall decisions for the stand builder, a 3D walk-through model, the back-wall graphic, posters, header banners and campaign panels.</p>
+          <div class="meta"><span>18–21 November 2026</span><span>Layout · 3D · print</span></div>
+        </div>
+      </div>
+      <div class="grid g-stand gallery">
+        <figure tabindex="0" class="c4"><img loading="lazy" src="img/st-backwall.jpg" data-full="img/st-backwall.jpg" alt="Back-wall graphic"><figcaption>Back-wall graphic</figcaption></figure>
+        <figure tabindex="0" class="c2"><img loading="lazy" src="img/st-nexa.jpg" data-full="img/st-nexa.jpg" alt="Nexa Mirror hueFX poster"><figcaption>Poster · Nexa Mirror hueFX</figcaption></figure>
+        <figure tabindex="0" class="c3"><img loading="lazy" src="img/st-huefx.jpg" data-full="img/st-huefx.jpg" alt="hueFX lens technology poster"><figcaption>Poster · hueFX lens technology</figcaption></figure>
+        <figure tabindex="0" class="c3"><img loading="lazy" src="img/st-p9.jpg" data-full="img/st-p9.jpg" alt="Wind hueFX — Focus On Yourself panel"><figcaption>Panel · Focus On Yourself</figcaption></figure>
+        <figure tabindex="0" class="c3"><img loading="lazy" src="img/st-p5.jpg" data-full="img/st-p5.jpg" alt="Shield · Aura — See Faster panel"><figcaption>Panel · See Faster</figcaption></figure>
+        <figure tabindex="0" class="c3"><img loading="lazy" src="img/st-p6.jpg" data-full="img/st-p6.jpg" alt="Clip-in optical kit panel"><figcaption>Panel · RX-ready clip-in kit</figcaption></figure>
+        <figure tabindex="0" class="c6"><img loading="lazy" src="img/st-p2.jpg" data-full="img/st-p2.jpg" alt="Header banner"><figcaption>Header banner</figcaption></figure>
+      </div>
+      <div class="facts">
+        <div><b>≈ 16.7 m²</b><span>Corner module, two open aisle fronts</span></div>
+        <div><b>8 elements</b><span>Totem, light boxes, display wall, try-on podium, meeting table, storage</span></div>
+        <div><b>Plan → 3D → print</b><span>Builder drawings, walk-through model and print-ready graphics</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="wrap">
+      <p class="eyebrow">Contact</p>
+      <h2>Let's talk.</h2>
+      <a class="btn" href="https://wa.me/46735917342" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 11.8 11.8 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></svg>
+        Message on WhatsApp
+      </a>
+      <span class="phone">+46 73 591 73 42</span>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">© Qulam Mirzezade. Work shown was created for Focus ON Eyewear; product names and logos belong to their owner.</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <img alt="">
+  <button class="x" aria-label="Close">×</button>
+  <button class="p" aria-label="Previous">‹</button>
+  <button class="n" aria-label="Next">›</button>
+  <div class="t"></div>
+</div>
+
+<script>
+(function(){
+  const lb=document.getElementById('lb'),im=lb.querySelector('img'),t=lb.querySelector('.t');
+  let list=[],i=0;
+  function show(){const el=list[i];im.src=el.dataset.full;im.alt=el.alt;t.textContent=el.alt+'  ·  '+(i+1)+' / '+list.length;}
+  function open(el){list=[...el.closest('.gallery').querySelectorAll('img[data-full]')];i=list.indexOf(el);show();lb.classList.add('open');document.body.style.overflow='hidden';}
+  function close(){lb.classList.remove('open');document.body.style.overflow='';im.src='';}
+  function step(d){i=(i+d+list.length)%list.length;show();}
+  document.querySelectorAll('.gallery figure').forEach(f=>{
+    const img=f.querySelector('img');
+    f.addEventListener('click',()=>open(img));
+    f.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();open(img);}});
+  });
+  lb.querySelector('.x').onclick=close;
+  lb.querySelector('.p').onclick=e=>{e.stopPropagation();step(-1)};
+  lb.querySelector('.n').onclick=e=>{e.stopPropagation();step(1)};
+  lb.addEventListener('click',e=>{if(e.target===lb)close();});
+  document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
+  let x0=null;lb.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+  lb.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)step(dx<0?1:-1);x0=null;});
+  // only one video plays at a time
+  document.querySelectorAll('video').forEach(v=>v.addEventListener('play',()=>document.querySelectorAll('video').forEach(o=>{if(o!==v)o.pause()})));
+})();
+</script>
+</body>
+</html>
